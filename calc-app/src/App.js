@@ -11,7 +11,7 @@ function App() {
  
   function plus(e) { 
     e.preventDefault(); 
-    setResult((result) => result + Number(inputRef.current.value)); 
+    setResult(((result + Number(inputRef.current.value))));
   }; 
  
   function minus(e) { 
@@ -32,12 +32,12 @@ function App() {
   function resetInput(e) { 
     e.preventDefault(); 
     inputRef.current.value =0;
-    // Add the code for the resetInput function 
+
   }; 
  
   function resetResult(e) { 
   	e.preventDefault(); 
-    setResult((prevVal) => prevVal * 0); 
+    setResult((result) => inputRef.current.value * 0); 
   }; 
  
   return ( 
